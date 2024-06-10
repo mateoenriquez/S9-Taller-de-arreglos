@@ -35,6 +35,27 @@ public class Parqueadero
 
     private boolean abierto;
 
+    //Constructores
+
+    public Parqueadero()
+    {
+        horaActual = HORA_INICIAL;
+        abierto = true;
+        tarifa = TARIFA_INICIAL;
+        caja = 0;
+        puestos = new Puesto[TAMANO];
+        for (int i = 0; i < TAMANO; i++)
+        {
+            puestos[i] = new Puesto(i);
+        }
+    }
+
+    public String darPlacaCarro(int pPosicion)
+    {
+        String respuesta = "";
+        if (estaOcupado())
+    }
+
 
 
 }
