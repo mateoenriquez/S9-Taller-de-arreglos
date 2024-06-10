@@ -23,4 +23,18 @@ public class Parqueadero
     //La tarifa inicial del parqueadero
     public static final int TARIFA_INICIAL = 1200;
 
+    //Atributos
+
+    private Puesto puestos[];
+
+    private int tarifa;
+
+    private int caja;
+
+    private int horaActual;
+
+    private boolean abierto;
+
+
+
 }
