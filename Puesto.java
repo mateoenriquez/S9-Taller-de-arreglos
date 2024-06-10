@@ -4,9 +4,17 @@ public class Puesto
 
     private Carro carro;
 
-    private int numeroPustos;
+    private int numeroPuestos;
 
     //Constructores
+
+    public Puesto(int pPuesto)
+    {
+        carro = null;
+        numeroPuestos = pPuesto;
+    }
+
+    //Metodos
 
 
 }
