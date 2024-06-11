@@ -77,7 +77,7 @@ public class Parqueadero
         else
         {
             //Buscar un puesto libre para el carro y agregarlo
-            int numPuestoCarro = buscarPuestoCaroo(pPlaca.toUpperCase());
+            int numPuestoCarro = buscarPuestoCarro(pPlaca.toUpperCase());
             if (numPuestoCarro != CARRO_NO_EXISTE)
             {
                 resultado = CARRO_NO_EXISTE;
@@ -149,6 +149,70 @@ public class Parqueadero
     private int buscarPuestoLibre()
     {
         int puesto = NO_HAY_PUESTO;
+        for (int i = 0; i < TAMANO && puesto == NO_HAY_PUESTO; i++)
+        {
+            if (!puestos[i].estaOcupado())
+            {
+                puesto = i;
+            }
+        }
+        return puesto;
+    }
+
+    private int buscarPuestoCarro(String pPlaca)
+    {
+        int puesto = CARRO_NO_EXISTE;
+        for (int i = 0; i < TAMANO && puesto == CARRO_NO_EXISTE; i++)
+        {
+            if (puestos[i].tieneCarroConPlaca(pPlaca))
+            {
+                puesto = i;
+            }
+        }
+        return puesto;
+    }
+
+    public void avanzarHora()
+    {
+        if(horaActual <= HORA_CIERRE)
+        {
+            horaActual = (horaActual + 1);
+        }
+        if (horaActual == HORA_CIERRE)
+        {
+            abierto = false;
+        }
+    }
+
+    public int darHoraActual()
+    {
+        return horaActual;
+    }
+
+    public boolean estaAbierto()
+    {
+        return abierto;
+    }
+
+    public int darTarifa()
+    {
+        return tarifa;
+    }
+
+    public boolean estaOcupado(int pPuesto)
+    {
+        boolean ocupado = puestos[pPuesto].estaOcupado();
+        return ocupado;
+    }
+
+    public String metodo1()
+    {
+        return "respuesta 1";
+    }
+
+    public String metodo2()
+    {
+        return "respuesta 2";
     }
 
 
