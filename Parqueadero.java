@@ -289,6 +289,17 @@ public class Parqueadero
         return count;
     }
 
+    public boolean hayCarroCon24Horas() {
+        for (Carro carro : carros) {
+            if (carro.getHorasParqueado() >= 24) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+
 
 
 
