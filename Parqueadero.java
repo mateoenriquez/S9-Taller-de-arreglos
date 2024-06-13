@@ -228,9 +228,20 @@ public class Parqueadero
         return (double) totalHoras / carros.size();
     }
 
+    public Carro carroConMasHoras() {
+        if (carros.isEmpty()) {
+            return null;
+        }
 
+        Carro carroConMasHoras = carros.get(0);
+        for (Carro carro : carros) {
+            if (carro.getHorasParqueado() > carroConMasHoras.getHorasParqueado()) {
+                carroConMasHoras = carro;
+            }
+        }
 
-
+        return carroConMasHoras;
+    }
 
 
 }
