@@ -215,6 +215,22 @@ public class Parqueadero
         return "respuesta 2";
     }
 
+    public double darTiempoPromedio() {
+        if (carros.isEmpty()) {
+            return 0;
+        }
+
+        int totalHoras = 0;
+        for (Carro carro : carros) {
+            totalHoras += carro.getHorasParqueado();
+        }
+
+        return (double) totalHoras / carros.size();
+    }
+
+
+
+
 
 
 }
