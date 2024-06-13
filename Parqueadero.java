@@ -243,5 +243,16 @@ public class Parqueadero
         return carroConMasHoras;
     }
 
+    public boolean hayCarroMasDeOchoHoras() {
+        for (Carro carro : carros) {
+            if (carro.getHorasParqueado() > 8) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+
 
 }
