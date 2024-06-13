@@ -299,10 +299,11 @@ public class Parqueadero
         return false;
     }
 
-
-
-
-
-
+    public String metodo1() {
+        int countPB = contarCarrosQueComienzanConPlacaPB();
+        boolean hay24Horas = hayCarroCon24Horas();
+        return "Cantidad de carros con placa PB: " + countPB +
+                " – Hay carro parqueado por 24 o más horas: " + (hay24Horas ? "Sí" : "No");
+    }
 
 }
