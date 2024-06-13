@@ -265,6 +265,19 @@ public class Parqueadero
         return carrosMasDeTresHoras;
     }
 
+    public boolean hayCarrosPlacaIgual() {
+        for (int i = 0; i < carros.size(); i++) {
+            for (int j = i + 1; j < carros.size(); j++) {
+                if (carros.get(i).getPlaca().equals(carros.get(j).getPlaca())) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+
 
 
 
