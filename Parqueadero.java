@@ -306,4 +306,17 @@ public class Parqueadero
                 " – Hay carro parqueado por 24 o más horas: " + (hay24Horas ? "Sí" : "No");
     }
 
+    public int desocuparParqueadero() {
+        int cantidad = carros.size();
+        carros.clear();
+        return cantidad;
+    }
+
+    public String metodo2() {
+        int cantidadSacados = desocuparParqueadero();
+        return "Cantidad de carros sacados: " + cantidadSacados;
+    }
+
+
+
 }
