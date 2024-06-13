@@ -277,6 +277,19 @@ public class Parqueadero
         return false;
     }
 
+    public int contarCarrosQueComienzanConPlacaPB() {
+        int count = 0;
+
+        for (Carro carro : carros) {
+            if (carro.getPlaca().startsWith("PB")) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+
 
 
 
