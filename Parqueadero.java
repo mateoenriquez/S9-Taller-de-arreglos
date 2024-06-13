@@ -253,6 +253,19 @@ public class Parqueadero
         return false;
     }
 
+    public ArrayList<Carro> darCarrosMasDeTresHorasParqueados() {
+        ArrayList<Carro> carrosMasDeTresHoras = new ArrayList<Carro>();
+
+        for (Carro carro : carros) {
+            if (carro.getHorasParqueado() > 3) {
+                carrosMasDeTresHoras.add(carro);
+            }
+        }
+
+        return carrosMasDeTresHoras;
+    }
+
+
 
 
 }
